@@ -132,13 +132,7 @@ Se abrirá automáticamente en el navegador.
 python api.py
 ```
 
-Luego abrir en navegador:
-
-```
-http://127.0.0.1:5000/games
-```
-
-Otros endpoints:
+### Luego abrir en navegador:
 
 ```
 http://127.0.0.1:5000/top10
@@ -162,27 +156,9 @@ print(data[0])
 
 ## Funcionalidades
 
-* Visualización de datos en tabla
+## * Visualización de datos en tabla
 * Filtros interactivos
 * Gráficos de análisis
 * Métricas en tiempo real
 * API REST para acceso a datos
-
----
-
-## .gitignore recomendado
-
-Crear archivo `.gitignore` con:
-
-```
-__pycache__/
-venv/
-steam.csv
-games_api.csv
-```
-
----
-
-## 👨‍💻 Autor
-
-Proyecto desarrollado como práctica de análisis de datos con Python y SQL Server.
+## 
