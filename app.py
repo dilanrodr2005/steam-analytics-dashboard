@@ -57,7 +57,7 @@ st.subheader("Juegos filtrados")
 st.dataframe(df_filtered)
 
 st.download_button(
-    label="📥 Descargar resultados en CSV",
+    label="Descargar resultados en CSV",
     data=df_filtered.to_csv(index=False).encode("utf-8"),
     file_name="steam_filtered.csv",
     mime="text/csv"
