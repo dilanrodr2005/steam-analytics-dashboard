@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def get_games():
-    # Lee los datos directamente del CSV subido a tu repositorio de GitHub
+    # Lee los datos directamente del archivo CSV en el repositorio
     return pd.read_csv("steam_clean.csv")
 
 
@@ -24,10 +24,8 @@ def get_avg_playtime_by_genre():
 def get_games_filtered(genre=None, min_rating=0, max_price=1000):
     df = get_games()
 
-    # Filtrar por rating y precio
     df_filtered = df[(df["rating"] >= min_rating) & (df["price"] <= max_price)]
 
-    # Filtrar por género si es distinto de "Todos"
     if genre and genre != "Todos":
         df_filtered = df_filtered[df_filtered["genre"] == genre]
 
