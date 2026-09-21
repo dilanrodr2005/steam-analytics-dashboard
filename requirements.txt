@@ -1,2 +1,5 @@
 streamlit
 pyodbc
+pandas
+flask 
+requests
