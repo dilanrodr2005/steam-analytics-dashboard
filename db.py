@@ -1,14 +1,24 @@
 import pyodbc
 import pandas as pd
-
+import streamlit as st
 
 def get_connection():
-    return pyodbc.connect(
+    # Carga las credenciales desde los Secrets de Streamlit
+    server = st.secrets["db_credentials"]["server"]
+    database = st.secrets["db_credentials"]["database"]
+    username = st.secrets["db_credentials"]["username"]
+    password = st.secrets["db_credentials"]["password"]
+    
+    connection_string = (
         "DRIVER={ODBC Driver 17 for SQL Server};"
-        "SERVER=localhost;"
-        "DATABASE=steam_analytics;"
-        "Trusted_Connection=yes;"
+        f"SERVER={server};"
+        f"DATABASE={database};"
+        f"UID={username};"
+        f"PWD={password};"
     )
+    return pyodbc.connect(connection_string)
+
+# El resto de tus funciones (get_games, get_top10_by_rating, etc.) quedan exactamente igual.
 
 
 def get_games():
