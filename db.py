@@ -3,7 +3,7 @@ import pandas as pd
 
 def get_games():
     # Lee los datos directamente del CSV subido a tu repositorio de GitHub
-    return pd.read_csv("steam_games.csv")
+    return pd.read_csv("steam_clean.csv")
 
 
 def get_top10_by_rating():
